@@ -2,22 +2,22 @@
 
 # JavaPersistence - Employee Management Application
 
-Aplikasi desktop CRUD (Create, Read, Update, Delete) untuk manajemen data karyawan menggunakan **Java 21 LTS**, **Hibernate ORM**, dan **MySQL Database**.
+Application desktop CRUD (Create, Read, Update, Delete) for employee database management **Java 21 LTS**, **Hibernate ORM**, and **MySQL Database**.
 ## 🧮 Hasil
 <img width="1920" height="1080" alt="" src="img/Screenshot-Program.png" />
 
 ## 🔧 Prerequisites
 
-Sebelum menjalankan aplikasi, pastikan sudah install:
+Before run, you must install:
 
-| Komponen | Versi | 
+| Component | Version | 
 |----------|-------|
 | Java JDK | 21 LTS |
 | Maven | 3.9.x |
 | MySQL Server | 8.0+ |
 
 ```bash
-# Verifikasi instalasi
+# Verifikation installation
 java -version
 mvn -version
 mysql --version
@@ -54,7 +54,7 @@ INSERT INTO karyawan VALUES
 ('K003', 'Tos', 'Bogor', '2002-12-10', 'Web Developer');
 ```
 
-**Atau gunakan script siap pakai:**
+**Use script to ready useful:**
 ```bash
 mysql -u root -p latihan < setup-database.sql
 ```
@@ -74,7 +74,7 @@ Edit file: `src/main/resources/META-INF/persistence.xml`
           value="com.mysql.cj.jdbc.Driver"/>
 ```
 
-⚠️ **Ganti `YOUR_PASSWORD` dengan password MySQL Anda!**
+⚠️ **Change `YOUR_PASSWORD` with your MYSQL password!**
 
 ---
 
@@ -88,21 +88,21 @@ mvn clean compile
 mvn exec:java
 ```
 
-Aplikasi akan launch dengan GUI window.
+Application will run with GUI Window.
 
 ---
 
 ## 📱 Features & Usage
 
-| Operasi | Langkah |
+| Operations | Step |
 |---------|---------|
-| **CREATE** | Isi form → Click ➕ INSERT |
-| **READ** | Auto-load saat start, double-click tabel untuk load ke form |
-| **SEARCH** | Ketik NIP → Press ENTER |
+| **CREATE** | Insert Form → Click ➕ INSERT |
+| **READ** | Auto-load if start, double-click table for load into the form |
+| **SEARCH** | Type NIP → Press ENTER |
 | **UPDATE** | Load data → Edit field → Click ✏️ UPDATE |
 | **DELETE** | Load data → Click 🗑️ DELETE → Confirm |
-| **REFRESH** | Click 🔄 REFRESH untuk reload semua data |
-| **CLEAR** | Click ❌ CLEAR untuk clear form |
+| **REFRESH** | Click 🔄 REFRESH for reload all data |
+| **CLEAR** | Click ❌ CLEAR for clear form |
 
 ---
 
@@ -127,16 +127,16 @@ JavaPersistence/
 
 ## 🐛 Troubleshooting
 
-| Error | Solusi |
+| Error | Solution |
 |-------|--------|
 | "Communications link failure" | `sudo systemctl start mysql` |
-| "Unknown database 'latihan'" | Jalankan SQL script dari bagian Database Setup |
-| "Data tidak ditemukan" | Pastikan data sudah ada di database |
-| "Duplicate entry for PRIMARY KEY" | Gunakan NIP yang unik |
-| "Form validation failed" | Pastikan semua field (*) terisi |
+| "Unknown database 'latihan'" | Run SQL script form database setup |
+| "Data not found" | Make sure data already exist in database |
+| "Duplicate entry for PRIMARY KEY" | Use unique NIP |
+| "Form validation failed" | Make sure all field (*) has been exist |
 | "Cannot locate persistence units" | `mvn clean compile` |
 
-**Untuk bantuan lengkap:** lihat [FIX-INSERT-ERROR.md](FIX-INSERT-ERROR.md)
+**For help:** see the section [FIX-INSERT-ERROR.md](FIX-INSERT-ERROR.md)
 
 ---
 
@@ -144,10 +144,10 @@ JavaPersistence/
 
 - ✅ **Zero compiler warnings** - Clean build
 - ✅ **All tests passing** - 100% test pass rate  
-- ✅ **Modern UI** - Professional design dengan JSplitPane & status bar
+- ✅ **Modern UI** - Professional design with JSplitPane & status bar
 - ✅ **Proper error handling** - User-friendly dialogs & console logging
 
-**Status:** Educational/Learning Purpose (tidak untuk production)
+**Status:** Educational/Learning Purpose (not for production)
 
 ---
 
