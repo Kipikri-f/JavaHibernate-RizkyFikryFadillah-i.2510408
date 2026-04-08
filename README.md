@@ -3,7 +3,7 @@
 # JavaPersistence - Employee Management Application
 
 Application desktop CRUD (Create, Read, Update, Delete) for employee database management **Java 21 LTS**, **Hibernate ORM**, and **MySQL Database**.
-## 🧮 Hasil
+## 🧮 Result
 <img width="1920" height="1080" alt="" src="img/Screenshot-Program.png" />
 
 ## 🔧 Prerequisites
